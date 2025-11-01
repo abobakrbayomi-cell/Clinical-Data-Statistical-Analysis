@@ -8,7 +8,7 @@ This repository showcases the methodology for a comprehensive statistical analys
 
 ## 🛠️ Tools and Libraries Used
 
-* **Python 3.x**
+* **Python 3.**
 * **Pandas:** For data loading, preparation, and cleaning.
 * **SciPy (scipy.stats):** For conducting inferential statistical tests, including Levene's test and the Kruskal-Wallis H Test.
 * **scikit-posthocs:** For non-parametric post-hoc analysis (Dunn's test).
