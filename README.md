@@ -9,10 +9,10 @@ This repository showcases the methodology for a comprehensive statistical analys
 ## 🛠️ Tools and Libraries Used
 
 * **Python 3.x**
-* [cite_start]**Pandas:** For data loading, preparation, and cleaning[cite: 4].
-* [cite_start]**SciPy (scipy.stats):** For conducting inferential statistical tests, including Levene's test and the Kruskal-Wallis H Test[cite: 13, 15].
-* [cite_start]**scikit-posthocs:** For non-parametric post-hoc analysis (Dunn's test)[cite: 20].
-* [cite_start]**Matplotlib & Seaborn:** For data visualization, including box plots, swarm plots, bar charts, and heatmaps[cite: 26].
+* **Pandas:** For data loading, preparation, and cleaning.
+* **SciPy (scipy.stats):** For conducting inferential statistical tests, including Levene's test and the Kruskal-Wallis H Test.
+* **scikit-posthocs:** For non-parametric post-hoc analysis (Dunn's test).
+* **Matplotlib & Seaborn:** For data visualization, including box plots, swarm plots, bar charts, and heatmaps.
 * **NumPy**
 
 ---
@@ -22,31 +22,31 @@ This repository showcases the methodology for a comprehensive statistical analys
 The analysis was performed in a systematic, multi-step process:
 
 ### 1. Data Preparation and Cleaning
-* [cite_start]Loaded the raw data from the source file using Pandas[cite: 5].
-* [cite_start]Performed cleaning operations, including trimming excess whitespace and standardizing data entries[cite: 6].
-* [cite_start]Managed missing values and identified potential outliers using the Interquartile Range (IQR) method[cite: 7].
+* Loaded the raw data from the source file using Pandas.
+* Performed cleaning operations, including trimming excess whitespace and standardizing data entries.
+* Managed missing values and identified potential outliers using the Interquartile Range (IQR) method.
 
 ### 2. Descriptive Statistics
-* [cite_start]Calculated key descriptive statistics (Mean, Median, SD, IQR, Range) for all quantitative variables using Pandas functions (e.g., `describe()`)[cite: 9, 10].
-* [cite_start]Compiled these statistics for the total sample and for each of the three study groups individually[cite: 10].
+* Calculated key descriptive statistics (Mean, Median, SD, IQR, Range) for all quantitative variables using Pandas functions (e.g., `describe()`).
+* Compiled these statistics for the total sample and for each of the three study groups individually.
 
 ### 3. Inferential Statistics (Group Comparison)
-* [cite_start]Checked data for assumptions (like homogeneity of variance) using **Levene's test** from SciPy[cite: 13].
-* [cite_start]As key variables did not meet the assumptions for parametric tests (like ANOVA), the **Kruskal-Wallis H Test** was employed as the primary non-parametric alternative to compare the three groups[cite: 15].
+* Checked data for assumptions (like homogeneity of variance) using **Levene's test** from SciPy.
+* As key variables did not meet the assumptions for parametric tests (like ANOVA), the **Kruskal-Wallis H Test** was employed as the primary non-parametric alternative to compare the three groups.
 
 ### 4. Post-Hoc Analysis
-* [cite_start]Following a significant Kruskal-Wallis result, post-hoc tests were performed to identify which specific pairs of groups were different[cite: 19].
-* [cite_start]The primary non-parametric follow-up was **Dunn's post-hoc test**, implemented using the `scikit-posthocs` library[cite: 20].
-* [cite_start]Results were corrected for multiple comparisons to reduce the risk of Type I errors (false positives)[cite: 22].
+* Following a significant Kruskal-Wallis result, post-hoc tests were performed to identify which specific pairs of groups were different.
+* The primary non-parametric follow-up was **Dunn's post-hoc test**, implemented using the `scikit-posthocs` library.
+* Results were corrected for multiple comparisons to reduce the risk of Type I errors (false positives).
 
 ### 5. Correlation Analysis
-* [cite_start]Assessed the strength and direction of relationships between quantitative variables[cite: 30].
-* [cite_start]**Spearman's rank correlation** was selected as the primary method due to its robustness for non-normally distributed data and sensitivity to outliers[cite: 31].
-* [cite_start]Generated Pearson and Spearman correlation heatmaps for baseline comparison and final analysis[cite: 33, 34].
-* [cite_start]Used scatter plots (both before and after outlier removal) to visually assess the robustness of key relationships (e.g., between Ln PVT1 and TGF B)[cite: 35, 36].
+* Assessed the strength and direction of relationships between quantitative variables.
+* **Spearman's rank correlation** was selected as the primary method due to its robustness for non-normally distributed data and sensitivity to outliers.
+* Generated Pearson and Spearman correlation heatmaps for baseline comparison and final analysis.
+* Used scatter plots (both before and after outlier removal) to visually assess the robustness of key relationships (e.g., between Ln PVT1 and TGF B).
 
 ### 6. Data Visualization
-* [cite_start]Utilized Matplotlib and Seaborn to generate a variety of plots[cite: 26].
-* [cite_start]**Box plots and swarm plots** were extensively used to compare distributions, identify outliers, and visually represent the post-hoc test results[cite: 28].
-* [cite_start]**Bar charts** were used for categorical variables and mean comparisons[cite: 27].
-* [cite_start]**Heatmaps** were used to visualize the correlation matrices[cite: 27].
+* Utilized Matplotlib and Seaborn to generate a variety of plots.
+* **Box plots and swarm plots** were extensively used to compare distributions, identify outliers, and visually represent the post-hoc test results.
+* **Bar charts** were used for categorical variables and mean comparisons.
+* **Heatmaps** were used to visualize the correlation matrices.
